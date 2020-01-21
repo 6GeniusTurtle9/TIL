@@ -80,7 +80,7 @@ print(sum_scores)
 #29차시
 i = 7
 n = 0
-while i < 0:
+while i > 0:
     a = str(" ")
     b = str("*")
     print("{0} {1} {0}".format(a*n,b*i))
