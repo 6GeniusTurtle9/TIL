@@ -135,3 +135,57 @@ nums_list = list(map(int, input().split()))
 nums_list.sort()
 result = nums_list[int(N/2)]
 print(result)
+
+#2068 최대수 찾기
+T = int(input())
+result = 0
+num_list = []
+
+for i in range(1,T+1):
+    num_list = list(map(int,input().split()))
+    result = num_list[0]
+    for j in range(1,10):
+        if num_list[j] > result:
+            result = num_list[j]
+    print("#{0} {1}".format(i, result))        
+
+#2070 큰놈, 작은놈, 같은놈
+T = int(input())
+result = ""
+
+for i in range(1, T+1):
+    a, b = map(int,input().split())
+    if a > b:
+        result = ">"
+    elif a < b:
+        result = "<"
+    else:
+        result = "="
+    print("#{0} {1}".format(i, result))
+
+#2071 평균값 구하기
+T = int(input())
+nums_list = []
+num_sum = 0
+result = 0
+
+for i in range(1, T+1):
+    nums_list = list(map(int,input().split()))
+    num_sum = 0
+    for j in range(0,10):
+        num_sum += nums_list[j]
+    result = round(num_sum / 10)
+    print("#{0} {1}".format(i, result))
+
+#2072 홀수만 더하기
+T = int(input())
+result = 0
+nums_list = []
+
+for i in range(1, T+1):
+    result = 0
+    nums_list = list(map(int,input().split()))
+    for j in range(0, 10):
+        if nums_list[j] % 2 == 1:
+            result += nums_list[j]
+    print("#{0} {1}".format(i, result))
