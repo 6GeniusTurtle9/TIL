@@ -1,5 +1,5 @@
 #2050 알파벳을 숫자로 변환
-아스키코드의 번호를 이용한 방법
+#아스키코드의 번호를 이용한 방법
 alphabet = input()
 alp_list = list(alphabet)
 alp_print = []
