@@ -4,9 +4,9 @@ def greeting(name = "익명"):
 print(greeting())
 print(greeting("범규야"))
 
-def greeting(age, name = "범규"):
+def greeting1(age, name = "범규"):
     return "{}는 {}살 입니다".format(name,age)
-print(greeting(27,"은이"))
+print(greeting1(27,"은이"))
 
 print('첫번째 문장',"두번째 문장",end = "//")
 print("세번째 문장","네번째 문장",sep="\n")
