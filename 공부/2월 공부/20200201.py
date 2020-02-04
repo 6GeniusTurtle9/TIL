@@ -17,7 +17,7 @@ for x in range(1,T+1):
     for sec in range(1,101):
         if sec % M == 0:
             boong += K
-        for key in cust_dict.keys():
+        for key, val in cust_dict.items():
             if int(key) == sec:
                 nujuk += cust_dict[key]
         if boong - nujuk < 0:
