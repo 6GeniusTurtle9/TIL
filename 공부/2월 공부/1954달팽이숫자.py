@@ -2,9 +2,11 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     arr = [[-1]*(N+2) for _ in range(N+2)]
+    print(arr)
     for a in range(1, N+1):
         for b in range(1, N+1):
             arr[a][b] = 0
+    print(arr)
     result = [[0]*N for _ in range(N)]
     visit = [[-1]*(N+2) for _ in range(N+2)]
     di = [0,1,0,-1]
