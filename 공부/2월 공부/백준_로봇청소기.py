@@ -43,7 +43,7 @@ cnt = 0
 # path = []
 # s.append((c, r))
 
-dfs(c, r)
+dfs(r, c)
 
 # print(path)
 print(cnt)
