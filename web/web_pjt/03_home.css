@@ -1,0 +1,95 @@
+/* 03_home.css */
+/* 아래에 코드를 작성해 주세요. */
+
+header {
+    margin-top: 80px;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: cover;
+    background-image: url('images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover-title {
+    height:240px;
+    width:440px;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+}
+
+div { 
+    margin: 0;
+}
+
+.btn {
+    height: 60px;
+    width: 100px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    left: 50%;
+    right: 50%;
+    transform:translate(-50%, -50%)
+}
+
+.btn:hover {
+    color: white;
+    background-color: blue;
+}
+
+.div-title {
+    margin: 0;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 100px;
+    padding: 50px;
+}
+
+.div-sec {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+.img-detail {
+    display: inline-block;
+}
+
+.img-detail > img {
+    margin: 0;
+    height: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.detail {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    left: 50%;
+    right: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.skill-img {
+    text-align: center;
+}
+
+

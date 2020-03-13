@@ -1,0 +1,42 @@
+/* 04_community.css */
+/* 아래에 코드를 작성해 주세요. */
+.main {
+    width: 720px;
+    margin: auto;
+}
+
+article {
+    display: table;
+    border:0;
+    border-bottom: 2px solid gray;
+    width: 720px;
+}
+
+.h1_center {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.article::after {
+    content: '';
+    display: block;
+    clear: right;
+}
+
+.hr_style {
+    width: 100px;
+    background-color:  orange;
+    border: 0;
+    height: 3px;
+}
+
+.article_left {
+    text-align: left;
+    width: 720px;
+}
+
+.article_right {
+    text-align: right;
+    width: 720px;
+    padding-bottom: 5px;
+}
