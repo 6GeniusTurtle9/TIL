@@ -1,6 +1,6 @@
 # Javascript
 
-### 기초
+### 기초 개념
 
 * 변수 선언(var)
 
@@ -35,6 +35,8 @@
     * 정수 타입이 따로 없음(정수 체계는 있음)
 
   * String -템플릿 문자열
+  
+* 연산자
 
 ### 문법
 
@@ -46,7 +48,7 @@
 
 
 
-### 배열
+### 배열, 순회
 
 > 객체 생성 방법
   * 객체는 Key와 Value로 구성된 속성(property)들의 모임
@@ -79,7 +81,7 @@
   
   
   
-### 함수
+### 함수(정의,(화살표 함수까지) ~ 클로저) 
 
 * 화살표 함수(ES6) -나중에 다시
 * 함수 인자
@@ -114,7 +116,7 @@
   * element.innerHTML(text)
   * element.insertAdjacentHTML(position, text)
 
-  ### 이벤트
+### 이벤트
 
 * EventTarget.addEventListener(type, listener [, useCapture])
   * type : 이벤트 유형 -click 등
