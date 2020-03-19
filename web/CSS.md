@@ -58,6 +58,8 @@
 
     콘텐츠가 제일 안 쪽
 
+    * margin (short hand) 순서 : 상 우 하 좌 / 상 (좌 우) 하/ (상하) (좌우) / (전체)
+
   * box-sizing: border-box
 
     * 실제 너비를 설정할 수 있다
@@ -105,7 +107,18 @@
    * float : 요소를 띄워서 좌우측으로 배치시키는 속성 (주로 수평 정렬에 사용됨)
    * z-index : 요소가 겹쳐지는 경우, 겹쳐지는 순서를 지정하는 속성 (가상의 Z축이 있다고 생각하고, z-index 속성값을 부여해서 순서대로 쌓는다고 생각하셔요!)
 
-
+* flex!!
+  * 부모 요소(contatiner)
+    * row(default)
+    * flex-direction: column (아래로)
+  * 자식 요소(item)
+  * main axis
+    * justify-content->메인축 설정
+    * 기본은 가로가 메인, 아래 방향이면 세로가 메인축
+  * cross axis
+    * align-item->크로스 축으로 메인축의 90도 방향
+    * 여기에서 center하면 크로스 축의 가운데로 정렬하며 메인축 방향으로 배치됨
+    * ex) 가로가 메인축이면, 세로로 가운데, 두 아이템은 좌우로 배치
 
 
 
