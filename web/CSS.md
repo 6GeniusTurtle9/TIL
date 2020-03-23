@@ -34,10 +34,15 @@
 
 * em vs rem(root em)
 
+  * em은 바디 기준
+  * rem은 상위 기준
+
 * viewport
 
 * vh, vw
 
+  * 보이는 페이지를 기준으로 %으로 나타낼 수 있다
+  
   
 
 ### 문서표현(하)
@@ -63,8 +68,11 @@
   * box-sizing: border-box
 
     * 실제 너비를 설정할 수 있다
+    * 보더 박스(테두리)를 기준으로 채워짐
 
 * 마진 상쇄
+
+  
 
 
 
@@ -76,9 +84,9 @@
   * 너비는 기본 100%
   * 너비를 가질 수 없다면 마진을 다 줌(자동으로)
 * display: inline
-
 * display: inline-block
-  * 
+* fixed: 페이지 전체를 기준
+* absoulute: relative의 자식 요소로 relative에서의 위치를 가진다
 
 기초문법 /선택자 및 우선순위/ 박스모델/디스플레이/포지션
 
