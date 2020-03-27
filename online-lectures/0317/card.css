@@ -1,0 +1,102 @@
+/* pdf에 정의된 초기화는 미리 작성 해두었습니다. */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+p {
+	font-family: Arial;
+}
+
+/* 아래에 카드 레이아웃을 직접 만들어보세요. */
+
+.b_size {
+	width: 700px;
+	height: 630px;
+	display: flex;
+    flex-direction: column;
+	align-self: center;
+	box-sizing: border-box;
+	border: 2px;
+	border-color: black;
+	border-style: solid;
+	position: relative;
+}
+
+
+.div_size {
+	width : 700px;
+	padding : 18px;
+	padding-bottom: 0px;
+}
+
+div > img {
+	margin-top:18px;
+	width: 664px;
+	height: 370px;
+}
+
+.img_title {
+	color : white;
+	background-color: gray;
+	width: 664px;
+	height: 30px;
+	float: bottom;
+	text-align: center;
+	position: relative;
+	bottom: 34px;
+	opacity: 0.8;
+}
+
+section {
+	width: 700px;
+	padding: 18px;
+	padding-top: 0px;
+}
+
+.under_line {
+	border-bottom: gray;
+	border-style: solid;
+	border:3px;
+	width: 664px;
+}
+
+.s_title {
+	text-align: left;
+	display: inline;
+}
+
+.s_date {
+	text-align: right;
+	display: inline;
+	float: right;
+	vertical-align: center;
+}
+
+.div_size2 {
+	width: 664x;
+	margin-top: 5px;
+	padding: 3px;
+	background-color: lightgoldenrodyellow;
+}
+
+.s_body {
+	padding: 2px;
+	text-align: left
+}
+
+footer {
+	width:664px;
+	position: absolute;
+	bottom: 1rem;
+	background-color: lightgrey;
+}

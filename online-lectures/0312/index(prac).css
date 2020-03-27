@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    /* 초기화로 달라 붙어 있게 */
+}
+
+nav {
+    padding: 1rem;
+    /* 적당히 부피있게 */
+    background-color: gray;
+}
+
+.nav-logo {
+    text-decoration: none;
+    /* 밑줄 제거 */
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-items {
+    float: right;
+    margin: 0;
+}
+
+.nav-item {
+    list-style: none;
+    /* 앞의 점을 없앰 */
+    display: inline;
+    /* 한줄로 만들어줌 */
+}
+
+.cover {
+    height: 500px;
+    /* 한줄 텍스트일 때, 수직 가운데 정렬
+        line-hegiht
+    */
+    /* line-height: 500px; */
+    /* display: table;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/bicycles.jpg');
+    text-align: center;
+}
+
+.cover-title {
+    margin: 0;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.contents {
+    text-align: center;
+}
+
+.contents > img {
+    width: 500px;
+}

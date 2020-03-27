@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index(prac).css">
+    <title>레이아웃 실습</title>
+</head>
+<body>
+    <nav>
+        <!-- a+ul>li*3 -->
+        <!--  + 인접, > 자식, *갯수-->
+        <!-- a+ul.nav-items>li.nav-item*3 -->
+        <a href="#" class="nav-logo">BIKESHARE</a>
+        <!-- class 부여한 이유
+        : ul 태그 선택 
+        -> 만약, 나중에 우리가 목록을 만들게 된다면?
+        -> 모든 것이 바뀌어버림
+        -->
+        <!-- div : 의미 없음
+        li는 목록!-->
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">LOGIN</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">SIGNUP</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- 높이는 컨텐츠영역 + 자식 높이를 따라감 -->
+    <section class="cover">
+        <h1 class="cover-title">자전거를 무료로 빌려드립니다</h1>
+    </section>
+    <section class="contents">
+        <h2>자전거로 도심을 누벼보세요</h2>
+        <img src="images/commuter.jpg" alt="자전거 타는 사람">
+    </section>
+</body>
+</html>
