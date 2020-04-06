@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">{{ articles.0.0 }}</th>
+        <th scope="col">{{ articles.0.1 }}</th>
+        <th scope="col">{{ articles.0.2 }}</th>
+        <th scope="col">{{ articles.0.3 }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for article in articles %}
+        {% if forloop.counter0 > 0 %}
+        <tr>
+            <th scope="row">{{ forloop.counter0 }}</th>
+            <td>{{ article.0 }}</td>
+            <td>{{ article.1 }}</td>
+             <td>{{ article.2 }}</td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

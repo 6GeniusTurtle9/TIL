@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>EDIT</h1>
+<hr>
+<form action="{% url 'articles:update' article.pk %}" method="POST">{% csrf_token %}
+    제목: <input type="text" name="title" id='title' value="{{ article.title }}"><br>
+    내용: <textarea name='content' id='content' value="{{ article.content }}">{{ article.content }}</textarea><br>
+    <input type="submit"><br>
+    <a href="{% url 'articles:detail' article.pk %}">Back</a>
+</form>
+{% endblock %}

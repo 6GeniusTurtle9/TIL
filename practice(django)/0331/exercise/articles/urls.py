@@ -1,0 +1,12 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('ping/', views.ping),
+    path('pong/', views.pong),
+    # /articles/
+    path('', views.index),
+    path('new/', views.new),
+    path('create/', views.create),
+    path('<int:pk>/', views.detail),
+]

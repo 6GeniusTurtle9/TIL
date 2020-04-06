@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Articles</h1>
+    <hr>
+    <h2>글 작성</h2>
+    <form action="/articles/create/" method="GET">
+    <label for ="title">제목: </label>
+    <input type="text" name="title" id='title'><br>
+    <label for ="title">내용: </label>
+    <input type="text" name='content' id='content'><br>
+    <input type='submit'>
+    </form>
+    <hr>
+    <a href="/articles">Back</a>
+{% endblock %}

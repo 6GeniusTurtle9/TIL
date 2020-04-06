@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>게시판</h1>
+    {% for article in articles %}
+        <p>{{ article.title }}</p>
+        <p>{{ article.content }}</p>
+    {% endfor %}
+{% endblock %}
