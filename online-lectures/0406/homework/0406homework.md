@@ -5,7 +5,7 @@
 * (a) : 
 
   ```html
-  {% url 'reservations:edit' reservation.id %}
+  {% url 'reservations:update' reservation.id %}
   ```
 
 * (b)
