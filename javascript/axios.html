@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdb.js~~"></script>
+    <script>
+        // promis => 성공/실패
+        // 성공했을 때, 어떤 일을 한다  .then()
+        // 실패했을 때, 어떤 일을 한다  .catch()
+        axios.get('https://koreajson.com/posts/1')      // 일단 할 일을 던짐->후순위로, 나중에 처리한다.
+        .then(function (res) { return res.data })
+        .then(function (data) {{ return data.content }})
+        .then(function (content) { console.log(content)})
+    </script>
+</body>
+</html>

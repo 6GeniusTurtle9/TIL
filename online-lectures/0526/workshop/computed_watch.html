@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>count: {{ count }}</h1>
+        <h1>calculated: {{ calculated }}</h1>
+        <button @click="decreaseCount">카운트 감소</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // computed : 단순히 가지고 있는 데이터를 기준으로 계산된 데이터를 유지하기 위한 속성
+        // watch : 특정한 데이터의 변경을 관찰하고, 해당 데이터가 변경되면 수행할 로직을 정의하기 위한 속성
+        const app = new Vue({
+            el:'#app',
+            data: {
+                count: 3,
+            },
+            methods: {
+                decreaseCount: function () {
+                    this.count = this.count - 1
+                },
+            },
+            computed: {
+                calculated: function () {
+                    return this.count * 3
+                },
+            },
+            watch: {
+                // count 값이 변경될 때마다 함수를 실행한다
+                count: function (newVal) {
+                    if (newVal === 0) {
+                        alert('값이 0이 되었습니다!!!')
+                        this.count = 3
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

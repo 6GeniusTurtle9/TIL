@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>0526 workshop</title>
+  <style>
+    /* 취소선 */
+    .completed {
+      text-decoration: line-through;
+      opacity: .7;
+    }
+  </style>
+</head>
+<body>
+  <!-- 여기에 코드를 작성하시오 -->
+  <div id="app">
+    <input type="text" v-model="newTodo">
+    <button v-on:click="addTodo">+</button><br>
+    <button v-on:click="deleteCompleted">완료된 할 일 삭제</button>
+    <select v-model="status">
+      <option value="all">전체</option>
+      <option value="ing">진행중</option>
+      <option value="end">완료</option>
+    </select>
+    <hr>
+    <li 
+    v-for="todo in computedTodoListByStatus" 
+    v-bind:class="{ completed : todo.completed }"
+    v-bind:key="todo.id"
+    >
+      <input type="checkbox" v-model="todo.completed">
+      {{ todo.content }}
+    </li>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // 여기에 코드를 작성하시오
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todoList: [
+          { id: 1, content: 'Vue JS 복습', completed: true},
+          { id: 2, content: 'Django 복습', completed: false},
+          { id: 3, content: 'JavaScript 복습', completed: false},
+        ],
+        newTodo: '',
+        status: 'all',
+      },
+      methods: {
+        check: function(todo ) {
+          todo.completed = !todo.completed
+        },
+        addTodo: function() {
+          this.todoList.push({
+            id : Data.now(),
+            content: this.newTodo,
+            completed: false,
+          })
+          this.newTodo = ''
+        },
+        deleteCompleted: function() {
+          // filter : 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환
+          const notCompletedTodoList = this.todoList.filter(todo => !todo.completed)
+          this.todoList = notCompletedTodoList
+        },
+        // status 값에 따라서 각기 다른 할 일 목록을 return 하는 메서드
+        // todoListByStatus: function() {
+        //   if (this.status === 'ing') {      // 미완료 할 일 목록
+        //     return this.todoList.filter(todo => !todo.completed)
+        //   }
+        //   if (this.status === 'end') {      // 완료 할 일 목록
+        //     return this.todoList.filter(todo => todo.completed)
+        //   }
+        //   return this.todoList   //전체목록
+        // },
+      },
+      computed: {
+        computedTodoListByStatus: function() {
+          if (this.status === 'ing') {      // 미완료 할 일 목록
+            return this.todoList.filter(todo => !todo.completed)
+          }
+          if (this.status === 'end') {      // 완료 할 일 목록
+            return this.todoList.filter(todo => todo.completed)
+          }
+          return this.todoList   //전체목록
+        },
+      },
+
+      // Wrap Up
+      // methods : 이벤트 발생 등과 같이 DOM에 변화가 감지 됐을 때, 행동(액션)을 취하고 싶은 경우.
+      // computed : 기존에 있는 데이터를 이용해서 어떠한 로직이 수행된, 계산된 데이터를 유지하고 싶은 경우.
+      // watch : 특정한 데이터의 변경을 관찰하고, 해당 데이터가 변경되면 수행할 로직을 정의하기 위한 속성
+
+    })
+  </script>
+</body>
+</html>

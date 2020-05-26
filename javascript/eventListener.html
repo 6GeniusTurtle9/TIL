@@ -20,6 +20,13 @@
         myButton.addEventListener('click', function(event) {
             confirm('얍!')
         })
+
+        myButton.addEventListener('click', 
+            function(event) {
+            this.classList.add('btn', 'btn-primary')    // 화살표 함수에선 작동 안함
+            event.target.classList.add('btn', 'btn-primary')
+            confirm('얍!')
+        })
     </script>
 </body>
 </html>
